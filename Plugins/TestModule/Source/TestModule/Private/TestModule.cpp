@@ -13,11 +13,15 @@ void FTestModuleModule::StartupModule()
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 	FEditorModeRegistry::Get().RegisterMode<FTestModuleEdMode>(FTestModuleEdMode::EM_TestModuleEdModeId, LOCTEXT("TestModuleEdModeName", "TestModuleEdMode"), FSlateIcon(), true);
 
+
 	IAssetTools& AssetTools = FModuleManager::LoadModuleChecked<FAssetToolsModule>("AssetTools").Get();
 
-	TSharedRef<IAssetTypeActions> Action = MakeShareable(new FTextAssetTypeActions());
-	AssetTools.RegisterAssetTypeActions(Action);
-	
+	EAssetTypeCategories::Type gameAssetCategory = AssetTools.RegisterAdvancedAssetCategory(FName(TEXT("JsonEditor")), FText::FromName(TEXT("JsonEditor")));
+
+	TSharedPtr<IAssetTypeActions> actionType = MakeShareable(new FTextAssetTypeActions(gameAssetCategory));
+
+	AssetTools.RegisterAssetTypeActions(actionType.ToSharedRef());
+
 }
 
 void FTestModuleModule::ShutdownModule()

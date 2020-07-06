@@ -3,6 +3,11 @@
 
 #include "TextAssetTypeActions.h"
 
+FTextAssetTypeActions::FTextAssetTypeActions(EAssetTypeCategories::Type InAssetCategory)
+	: MyAssetCategory(InAssetCategory)
+{
+}
+
 FColor FTextAssetTypeActions::GetTypeColor() const
 {
 	return FColor::Red;
