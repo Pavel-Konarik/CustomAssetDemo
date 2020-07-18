@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class TestModule : ModuleRules
+public class ExtraAssetsEditor : ModuleRules
 {
-	public TestModule(ReadOnlyTargetRules Target) : base(Target)
+	public ExtraAssetsEditor(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
@@ -38,12 +38,10 @@ public class TestModule : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				"InputCore",
-				"UnrealEd",
-				"LevelEditor",
-
-				 "AssetTools",
-				
+				"AssetTools",
+				"ExtraAssets",
+                "UnrealEd",
+                
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

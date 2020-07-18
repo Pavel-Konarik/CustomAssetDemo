@@ -10,13 +10,13 @@
  * 
  */
 UCLASS(BlueprintType)
-class TESTMODULE_API UTextAsset : public UObject
+class EXTRAASSETS_API UTextAsset : public UObject
 {
 	GENERATED_BODY()
 
 public:
 	UPROPERTY(EditAnywhere)
-		FString myString;
+	FString myString;
 	
 };
 

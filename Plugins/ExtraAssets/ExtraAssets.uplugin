@@ -2,7 +2,7 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "TestModule",
+	"FriendlyName": "ExtraAssets",
 	"Description": "",
 	"Category": "Other",
 	"CreatedBy": "",
@@ -10,13 +10,18 @@
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
-	"CanContainContent": false,
+	"CanContainContent": true,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
 	"Modules": [
 		{
-			"Name": "TestModule",
+			"Name": "ExtraAssets",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "ExtraAssetsEditor",
 			"Type": "Editor",
 			"LoadingPhase": "Default"
 		}

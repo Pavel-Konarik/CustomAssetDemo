@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class TESTMODULE_API UTextAssetFactory : public UFactory
+class EXTRAASSETSEDITOR_API UTextAssetFactory : public UFactory
 {
 	GENERATED_BODY()
 		

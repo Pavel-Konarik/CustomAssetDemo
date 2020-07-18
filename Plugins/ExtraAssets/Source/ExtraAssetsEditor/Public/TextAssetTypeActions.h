@@ -7,6 +7,8 @@
 #include "TextAsset.h"
 
 
+
+
 class FTextAssetTypeActions : public FAssetTypeActions_Base
 {
 public:

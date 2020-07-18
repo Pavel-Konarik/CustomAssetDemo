@@ -7,11 +7,8 @@
 #include <IAssetTools.h>
 #include <Modules/ModuleManager.h>
 
-UTextAssetFactory::UTextAssetFactory() //:Super()
+UTextAssetFactory::UTextAssetFactory() 
 {
-	//IAssetTools& AssetTools = FModuleManager::LoadModuleChecked<FAssetToolsModule>("AssetTools").Get();
-	//RegisterAssetTypeAction(AssetTools, MakeShareable(new FTextAssetTypeActions()));
-
 	bCreateNew = true;
 	bEditAfterNew = true;
 	SupportedClass = UTextAsset::StaticClass();
@@ -22,4 +19,3 @@ UObject* UTextAssetFactory::FactoryCreateNew(UClass* InClass, UObject* InParent,
 	auto MyTextAsset = NewObject<UTextAsset>(InParent, InClass, InName, Flags);
 	return MyTextAsset;
 }
-

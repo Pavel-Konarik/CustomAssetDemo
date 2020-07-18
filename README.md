@@ -1,2 +1,5 @@
 # CustomAssetDemo
-A very simple demo about How to create a custom Asset Type in UE4.25+
+## What is this?
+A simple example demonstrating creation of custom asset type and a custom asset category. This example works on UE4.25+
+
+
